@@ -137,18 +137,18 @@ public class CreateRolePage {
 		}
 	}
 	
-	public void Entering_Viola_PIN(String pin) {
+	public void Entering_Nipun_PIN(String pin) {
 		PrepaidRechargePage pr=new PrepaidRechargePage(driver);
-		pr.Entering_ViolaPIN(pin);
+		pr.Entering_NipunPIN(pin);
 	}
 	
-	public void Verify_ViolaPIN_Invalid() {
+	public void Verify_NipunPIN_Invalid() {
 		CommonFunc cf=new CommonFunc(driver);
-		cf.waitforelement(viola_pin_error);
-		if(Viola_PIN_Error_Popup().isDisplayed()) {
-			cf.Log_Message("Viola PIN is not valid error popup is displayed", "true");
+		cf.waitforelement(Nipun_pin_error);
+		if(Nipun_PIN_Error_Popup().isDisplayed()) {
+			cf.Log_Message("Nipun PIN is not valid error popup is displayed", "true");
 		}else {
-			cf.Log_Message("Viola PIN is not valid error popup is not displayed", "false");
+			cf.Log_Message("Nipun PIN is not valid error popup is not displayed", "false");
 		}
 		Ok_Button().click();
 	}
